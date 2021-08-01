@@ -124,7 +124,6 @@ class App {
         this.stabilized = true;
         document.body.classList.add("stabilized");
       }
-      
       if (hitTestResults.length > 0) {
         const hitPose = hitTestResults[0].getPose(this.localReferenceSpace);
     

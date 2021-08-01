@@ -20,6 +20,7 @@ window.gltfLoader = new THREE.GLTFLoader();
  * horizontal surface.
  */
 
+
 class Reticle extends THREE.Object3D {
   constructor() {
     super();
@@ -33,9 +34,9 @@ class Reticle extends THREE.Object3D {
   }
 }
 
-window.gltfLoader.load("https://immersive-web.github.io/webxr-samples/media/gltf/sunflower/sunflower.gltf", function(gltf) {
-  const flower = gltf.scene.children.find(c => c.name === 'sunflower')
-  flower.castShadow = true;
+window.gltfLoader.load("https://github.com/marcomorenom/ar-test/blob/master/assets/painting.gltf", function(gltf) {
+  //const flower = gltf.scene.children.find(c => c.name === 'sunflower')
+  // flower.castShadow = false;
   window.sunflower = gltf.scene;
 });
 
