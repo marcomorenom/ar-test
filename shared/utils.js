@@ -19,6 +19,7 @@ window.gltfLoader = new THREE.GLTFLoader();
  * `xrSession.requestHitTest()` to render a ring along a found
  * horizontal surface.
  */
+
 class Reticle extends THREE.Object3D {
   constructor() {
     super();
@@ -27,7 +28,7 @@ class Reticle extends THREE.Object3D {
     this.loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/reticle/reticle.gltf", (gltf) => {
       this.add(gltf.scene);
     })
-
+    this.rotateX( Math.PI / 2);
     this.visible = false;
   }
 }
@@ -62,8 +63,10 @@ window.DemoUtils = {
 
     // Make a large plane to receive our shadows
     const planeGeometry = new THREE.PlaneGeometry(2000, 2000);
+
     // Rotate our plane to be parallel to the floor
-    planeGeometry.rotateX(-Math.PI / 2);
+    //planeGeometry.rotateX(-Math.PI / 2);
+    planeGeometry.rotateX( Math.PI / 2);
 
     // Create a mesh with a shadow material, resulting in a mesh
     // that only renders shadows once we flip the `receiveShadow` property.
