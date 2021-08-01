@@ -35,8 +35,8 @@ class Reticle extends THREE.Object3D {
 }
 
 window.gltfLoader.load("https://github.com/marcomorenom/ar-test/blob/master/assets/painting.gltf", function(gltf) {
-  //const flower = gltf.scene.children.find(c => c.name === 'sunflower')
-  // flower.castShadow = false;
+  const flower = gltf.scene.children.find(c => c.name === 'sunflower')
+  flower.castShadow = false;
   window.sunflower = gltf.scene;
 });
 
